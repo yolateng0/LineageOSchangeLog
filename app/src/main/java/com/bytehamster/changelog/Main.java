@@ -59,7 +59,7 @@ import android.widget.Toast;
 
 public class Main extends AppCompatActivity {
 
-    public static final String                   DEFAULT_GERRIT_URL   = "https://gerrit.omnirom.org/";
+    public static final String                   DEFAULT_GERRIT_URL   = "https://review.lineageos.org/";
     public static final String                   DEFAULT_BRANCH       = "android-6.0";
     public static final int                      MAX_CHANGES          = 200;
     public static final int                      MAX_CHANGES_FETCH    = 800;  // Max changes to be fetched
@@ -82,7 +82,7 @@ public class Main extends AppCompatActivity {
     private Document                             mWatchedDoc          = null;
     private ChangeAdapter                        mChangeAdapter       = null;
     private int                                  mChangesCount        = 0;
-    private String                               GERRIT_URL           = "https://gerrit.omnirom.org/";
+    private String                               GERRIT_URL           = "https://review.lineageos.org/";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -328,7 +328,7 @@ public class Main extends AppCompatActivity {
                 d2.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        External.feedbackMail(mActivity, "OmniROM Changelog: Feedback", "");
+                        External.feedbackMail(mActivity, "LineageOS Changelog: Feedback", "");
                     }
                 });
                 d2.show().setCanceledOnTouchOutside(true);
@@ -474,7 +474,7 @@ public class Main extends AppCompatActivity {
         root.findViewById(R.id.report_missing_device).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                External.feedbackMail(mActivity, "OmniROM Changelog: Device request", "Please add my device to the filter list.\n" + Build.MANUFACTURER + " | " + Build.MODEL + " | " + Build.DEVICE + "\n");
+                External.feedbackMail(mActivity, "LineageOS Changelog: Device request", "Please add my device to the filter list.\n" + Build.MANUFACTURER + " | " + Build.MODEL + " | " + Build.DEVICE + "\n");
             }
         });
         root.findViewById(R.id.search_button).setOnClickListener(new OnClickListener() {
