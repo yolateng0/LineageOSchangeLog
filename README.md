@@ -1,0 +1,2 @@
+# LineageOSchangeLog
+LineageOS ChangeLog 
